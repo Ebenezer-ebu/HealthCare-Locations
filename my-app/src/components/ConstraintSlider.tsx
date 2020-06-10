@@ -1,8 +1,13 @@
 import React from 'react';
 import { CarOutlined, SlidersOutlined } from '@ant-design/icons';
 
-
-const ConstraintSlider = (({ iconType, value, onChange, text }) => {
+type Props = {
+    iconType: string;
+    value: number;
+    onChange: (value: any) => void;
+    text: string
+}
+const ConstraintSlider = (({ iconType, value, onChange, text }: Props) => {
   return (
     < section className="d-flex flex-column" >
       <div className="d-flex w-100 align-items-center">

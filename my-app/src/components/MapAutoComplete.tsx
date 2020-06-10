@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import { AutoComplete } from 'antd';
 
-class MapAutoComplete extends Component {
+type State = {
+    suggestions: Array<any>;
+      dataSource: Array<any>;
+      nigeriaLatLng: any;
+      autoCompleteService: any;
+      geoCoderService: any;
+    
+}
+
+class MapAutoComplete extends Component<any, State> {
   constructor(props: Readonly<{}>) {
     super(props);
     this.state = {
-      suggestionts: [],
+      suggestions: [],
       dataSource: [],
       nigeriaLatLng: this.props.nigeriaLatLng,
       autoCompleteService: this.props.autoCompleteService,

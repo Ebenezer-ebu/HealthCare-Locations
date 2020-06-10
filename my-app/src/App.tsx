@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import MapContainer from './containers/MapContainer';
 
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'antd/dist/antd.css';
 
 class App extends Component {

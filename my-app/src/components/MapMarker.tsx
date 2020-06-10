@@ -1,7 +1,14 @@
 import React from 'react';
 import { EnvironmentOutlined } from '@ant-design/icons';
 
-const MapMarker = (({ name, key }) => {
+type Props = {
+    name: string;
+    key: string | number;
+    lat?: any;
+    lng?: any
+}
+
+const MapMarker = (({ name, key }: Props) => {
   return (
     <div key={key}>
       <span className="brand-red">{name}</span>

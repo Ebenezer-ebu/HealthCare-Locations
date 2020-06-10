@@ -6,7 +6,6 @@ import PlaceCard from '../components/PlaceCard';
 import ConstraintSlider from '../components/ConstraintSlider';
 
 import { Button, Input, Divider, message } from 'antd';
-import { type } from 'os';
 
 const NG_COOR = { lat: 1.3521, lng: 103.8198 };
 type Constraints = {
@@ -20,12 +19,12 @@ type State = {
     mapsLoaded: boolean;
     markers: Array<any>;
     map: {},
-    mapsApi: {},
+    mapsApi: any,
     nigeriaLatLng: {},
     autoCompleteService: {},
-    placesService: {},
+    placesService: any,
     geoCoderService: {},
-    directionService: {},
+    directionService: any,
 }
 
 class MapContainer extends Component<any, State> {
@@ -46,7 +45,7 @@ class MapContainer extends Component<any, State> {
         };
     }
     // Update name for constraint with index === key
-  updateConstraintName = ((event: { preventDefault: () => void; target: { value: any; }; }, key: React.ReactText) => {
+  updateConstraintName = ((event: { preventDefault: () => void; target: { value: any; }; }, key: any) => {
     event.preventDefault();
     const prevConstraints = this.state.constraints;
     const constraints: Constraints[] = Object.assign([], prevConstraints);
@@ -55,9 +54,9 @@ class MapContainer extends Component<any, State> {
   });
 
   // Updates distance (in KM) for constraint with index == key
-  updateConstraintTime = ((key: React.ReactText, value: any) => {
+  updateConstraintTime = ((key: any, value: any) => {
     const prevConstraints = this.state.constraints;
-    const constraints = Object.assign([], prevConstraints);
+    const constraints: Constraints[] = Object.assign([], prevConstraints);
     constraints[key].time = value;
     this.setState({ constraints });
   });

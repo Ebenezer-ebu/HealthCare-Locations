@@ -1,8 +1,24 @@
 import React from 'react';
 import { Rate } from 'antd';
 
+type Info = {
+    address: string;
+    distanceText: string | number;
+    name: string;
+    openNow: boolean;
+    photoUrl: string;
+    priceLevel: any;
+    rating: any;
+    timeText: string | number;
+}
+
+type Props = {
+    info: Info;
+    key: string | number
+}
+
 // TODO: info is bad naming.
-const PlaceCard = (({ info, key }) => {
+const PlaceCard = (({ info, key }: Props) => {
   const { address, distanceText, name, openNow, photoUrl, priceLevel, rating, timeText } = info;
   return (
     <div key={key} className="col-3 w-100 mx-4 my-4">
