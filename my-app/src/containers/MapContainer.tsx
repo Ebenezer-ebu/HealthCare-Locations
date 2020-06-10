@@ -241,7 +241,7 @@ class MapContainer extends Component<any, State> {
     <Divider />
     <section className="col-12">
       <div className="d-flex flex-column justify-content-center">
-        <h1 className="mb-4 fw-md">Tadah! Ice-Creams!</h1>
+        <h1 className="mb-4 fw-md">Health Care Service!</h1>
         <div className="d-flex flex-wrap">
           {searchResults.map((result: any, key: any) => (
             <PlaceCard info={result} key={key} />
