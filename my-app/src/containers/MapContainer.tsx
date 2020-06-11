@@ -7,7 +7,7 @@ import ConstraintSlider from '../components/ConstraintSlider';
 
 import { Button, Input, Divider, message } from 'antd';
 
-const NG_COOR = { lat: 1.3521, lng: 103.8198 };
+const NG_COOR = { lat: 6.465422, lng: 3.406448  };
 type Constraints = {
     name: string;
     time: number

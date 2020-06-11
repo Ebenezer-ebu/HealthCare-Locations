@@ -57,7 +57,7 @@ class MapAutoComplete extends Component<any, State> {
     return (
       <AutoComplete
         className="w-100"
-        dataSource={dataSource}
+        options={dataSource}
         onSelect={this.onSelect}
         onSearch={this.handleSearch}
         placeholder="Address"
