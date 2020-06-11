@@ -1,0 +1,1 @@
+web: cd my-app && yarn run start
